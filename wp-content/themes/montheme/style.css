@@ -1,0 +1,87 @@
+/*
+Theme Name: Mon premier thème
+Author: Luca Haenel
+Author URI: http://monsiteweb.com
+Description: Mon premier thème WordPress !
+*/
+
+body{
+    width:85%;
+    margin:auto;
+    padding:0;
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* --------- Header --------- */
+
+header h1{
+    text-align: center;
+}
+
+
+/* --------- Content --------- */
+
+#content{
+    background-color:#f1f2f4;
+}
+
+/* Posts */
+
+.post{
+    border-bottom: 2px solid #acacac;
+    padding:20px 20px 40px 20px
+
+}
+
+.post h2>a{
+    text-decoration: none;;
+}
+
+.post h2>a:hover{
+    color:#6597ed;
+}
+
+.post .back{
+    color:black;
+}
+
+.post .back:hover{
+    opacity: .8;
+}
+
+.post .category a {
+    color: #FFF;
+    text-transform: uppercase;
+    line-height: 2em;
+    background: #444;
+    padding: 4px 6px 4px 6px;
+    border-radius: 3px;
+    font-size:13px;
+}
+
+.post .category a:hover{
+    opacity: .75;
+}
+
+.addtoany_share_save_container .a2a_dd.addtoany_no_icon.addtoany_share_save{
+    font-size:18px;
+}
+
+span.a2a_svg.a2a_s__default.a2a_s_google_plus,span.a2a_svg.a2a_s__default.a2a_s_twitter,span.a2a_svg.a2a_s__default.a2a_s_facebook{
+    height: 20px;
+    line-height: 20px;
+    width: 20px;
+}
+
+/* ---------- Footer ---------- */
+
+#footer{
+    margin-top:50px;
+    padding-bottom: 10px;
+    position: relative;
+    float:right;
+}
