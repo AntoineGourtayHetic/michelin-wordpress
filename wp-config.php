@@ -22,7 +22,7 @@ define('WP_CACHE', true); // Added by W3 Total Cache
 
 // ** Réglages MySQL - Votre hébergeur doit vous fournir ces informations. ** //
 /** Nom de la base de données de WordPress. */
-define('DB_NAME', 'wordpress_first');
+define('DB_NAME', 'wordpress_cours');
 
 /** Utilisateur de la base de données MySQL. */
 define('DB_USER', 'root');
