@@ -1,17 +1,30 @@
-<?php
-/**
- * Front to the WordPress application. This file doesn't do anything, but loads
- * wp-blog-header.php which does and tells WordPress to load the theme.
- *
- * @package WordPress
- */
+<?php get_header(); ?>
 
-/**
- * Tells WordPress to load the WordPress theme and output it.
- *
- * @var bool
- */
-define('WP_USE_THEMES', true);
+<div id="content">
+    <?php
+    // boucle WordPress
+    if (have_posts()){
+        while (have_posts()){
+            the_post();
+    ?>
+        <div class="post">
+            <?if (is_single()){?>
+                <a href="javascript:history.go(-1)" class="back"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Retour</a><?
+            }?>
+            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+            <p><?php the_content(); ?></p>
+            <p class="postmetadata">Posté le <?php the_time('d/m/Y'); ?></p>
+            <p class="category"><?php the_category(', '); ?></p>
+        </div>
+    <?php
+        }
+    }
+    else {
+    ?>
+    Nous n'avons pas trouvé d'article répondant à votre recherche
+    <?php
+    }
+    ?>
+</div> <!-- /content -->
 
-/** Loads the WordPress Environment and Template */
-require( dirname( __FILE__ ) . '/wp-blog-header.php' );
+<?php get_footer(); ?>
