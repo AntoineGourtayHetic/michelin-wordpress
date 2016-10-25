@@ -3,12 +3,19 @@
     <head>
         <meta charset="<?php bloginfo( 'charset' ); ?>" />
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
-        <header id="header">
-        <!-- Tout le contenu de l entête de mon site -->
-            <h1>Michelin 2017!</h1>
-        </header>
+    <nav>
+        <div class="nav-wrapper">
+        <a href="../" class="brand-logo center">Michelin 2017</a>
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <li><a href="sass.html">Dons</a></li>
+                <li><a href="badges.html">Popo</a></li>
+                <li><a href="collapsible.html">Pourquoi lui</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">

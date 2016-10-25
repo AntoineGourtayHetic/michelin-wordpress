@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-
 <div id="content">
     <?php
     // boucle WordPress
@@ -25,6 +24,34 @@
     <?php
     }
     ?>
-</div> <!-- /content -->
+</div>
+
+    <div class="row">
+  <form class="col s12">
+    <div class="row">
+        <h3>Receive our latest news !</h3>
+      <div class="input-field col s12">
+        <input id="email" type="email" class="validate">
+        <label for="email" data-error="wrong" data-success="right">Email</label>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+<!-- <div class="row">
+    <div class="col l12 m12">
+        <div class="cuteslide">
+            <div><img src="</?php bloginfo('template_url'); ?>/assets/imgs/drone1.jpg"></div>
+            <div><img src="</?php bloginfo('template_url'); ?>/assets/imgs/drone2.jpg"></div>
+            <div><img src="</?php bloginfo('template_url'); ?>/assets/imgs/drone3.jpg"></div>
+        </div>
+        <div class="navslide">
+            <div><img src="</?php bloginfo('template_url'); ?>/assets/imgs/drone1.jpg" style="padding:0 10px;"></div>
+            <div><img src="</?php bloginfo('template_url'); ?>/assets/imgs/drone2.jpg" style="padding:0 10px;"></div>
+            <div><img src="</?php bloginfo('template_url'); ?>/assets/imgs/drone3.jpg" style="padding:0 10px;"></div>
+        </div>
+    </div>
+</div> -->
 
 <?php get_footer(); ?>
