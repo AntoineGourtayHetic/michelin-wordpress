@@ -1,16 +1,16 @@
 <?php
 
 // CREATION CUSTOM POST TYPES
-include_once('assets/inc/custom_post_types.php');
+include_once('build/inc/custom_post_types.php');
 
 // CREATION TAXONOMIES
-include_once('assets/inc/taxonomies.php');
+include_once('build/inc/taxonomies.php');
 
 // CREATION ROLES
-include_once('assets/inc/roles.php');
+include_once('build/inc/roles.php');
 
 // CREATION STYLES SCRIPTS
-include_once('assets/inc/scripts_styles.php');
+include_once('build/inc/scripts_styles.php');
 
 // THEME SUPPORT
-include_once('assets/inc/theme_support.php');
+include_once('build/inc/theme_support.php');
