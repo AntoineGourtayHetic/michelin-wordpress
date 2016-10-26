@@ -37,8 +37,8 @@ gulp.task('watch', function(){
         }
     })
     gulp.watch('*.php', ['php']);
-    gulp.watch('assets/js/*.js', ['script']);
-    gulp.watch('assets/css/*.scss', ['css']);
+    // gulp.watch('assets/js/*.js', ['script']);
+    gulp.watch('assets/sass/*.scss', ['css']);
     // gulp.watch('*.php').on('change', browserSync.reload);
 });
 
@@ -52,4 +52,4 @@ gulp.task('imagemin', function() {
 
 
 // what to run when 'gulp' is entered in the terminal //
-gulp.task('default', ['script', 'css', 'watch']);
+gulp.task('default', ['css', 'watch']);
