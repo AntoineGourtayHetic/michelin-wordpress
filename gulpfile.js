@@ -15,7 +15,7 @@ gulp.task('browser-sync', function() {
     //initialize browsersync
     browserSync.init(files, {
     //browsersync with a php server
-    proxy: "localhost:8888/hetic/h3/michelin-president/",
+    proxy: "localhost:8888/michelin-president/",
     notify: false
     });
 });
@@ -30,41 +30,7 @@ gulp.task('sass', function(){
         .pipe(reload({stream:true}));
 });
 
-<<<<<<< HEAD
-// // --------------  html move  --------------   //
-// gulp.task('php', function(){
-//    gulp.src('*.php')
-//         .pipe(gulp.dest('build/'))
-//         .pipe(browserSync.stream());
-// });
-
-// --------------  watch changes  --------------   //
-gulp.task('watch', function(){
-    browserSync.init({
-        server : {
-            baseDir : 'build'
-        }
-    })
-    gulp.watch('*.php', ['php']);
-    // gulp.watch('assets/js/*.js', ['script']);
-    gulp.watch('assets/sass/*.scss', ['css']);
-    // gulp.watch('*.php').on('change', browserSync.reload);
-});
-
-
-// --------------  Minify and copy new images to build  --------------   //
-gulp.task('imagemin', function() {
-    return gulp.src('assets/img/**/*')
-        .pipe(imagemin())
-        .pipe(gulp.dest('build/img'))
-})
-
-
-// what to run when 'gulp' is entered in the terminal //
-gulp.task('default', ['css', 'watch']);
-=======
 // Default task to be run with `gulp`
 gulp.task('default', ['sass', 'browser-sync'], function () {
     gulp.watch("assets/sass/**/*.scss", ['sass']);
 });
->>>>>>> 6a55fb97163b4e3003ef9bee44b8016561c4cdfa
