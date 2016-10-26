@@ -28,7 +28,7 @@ wp_enqueue_style( 'slick_theme_style' );
 
 
 // enregistrement d'un nouveau script
-wp_register_script('main', get_template_directory_uri() . '/build/js/script.js', false, NULL, true);
+wp_register_script('main', get_template_directory_uri() . '/build/js/main.js', false, NULL, true);
 wp_enqueue_script('main');
 
 wp_register_script('modernizr', get_template_directory_uri() . '/build/js/modernizr.js', false, NULL, true);
