@@ -9,11 +9,11 @@
     <body <?php body_class(); ?>>
     <nav>
         <div class="nav-wrapper">
-        <a href="index.php" class="brand-logo center">Michelin 2017</a>
+        <a href="<?php echo home_url();?>" class="brand-logo center"><img src="<?php bloginfo('template_url'); ?>/build/img/logo.png" alt="michelin_logo" width="200px" /></a>
             <ul id="nav-mobile" class="left hide-on-med-and-down">
-                <li><a href="sass.html">Dons</a></li>
-                <li><a href="badges.html">Popo</a></li>
-                <li><a href="collapsible.html">Pourquoi lui</a></li>
+                <li><a href="dons.php">Dons</a></li>
+                <li><a href="blog.php">Blog</a></li>
+                <li><a href="contact.php">Contact</a></li>
             </ul>
         </div>
     </nav>

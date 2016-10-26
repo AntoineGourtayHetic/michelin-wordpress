@@ -33,7 +33,11 @@
 /* 1. Colors
    ========================================================================== */
 
+<<<<<<< HEAD
 $primary-color: color("deep-purple", "lighten-2") !default;
+=======
+$primary-color: color("shades", "white") !default;
+>>>>>>> 6a55fb97163b4e3003ef9bee44b8016561c4cdfa
 $primary-color-light: lighten($primary-color, 15%) !default;
 $primary-color-dark: darken($primary-color, 15%) !default;
 
