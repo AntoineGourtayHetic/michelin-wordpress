@@ -11,9 +11,14 @@
         <div class="nav-wrapper">
         <a href="<?php echo home_url();?>" class="brand-logo center"><img src="<?php bloginfo('template_url'); ?>/build/img/logo.png" alt="michelin_logo" width="200px" /></a>
             <ul id="nav-mobile" class="left hide-on-med-and-down">
-                <li><a href="dons.php">Dons</a></li>
-                <li><a href="blog.php">Blog</a></li>
-                <li><a href="contact.php">Contact</a></li>
+                <?php $args=array(
+                  'theme_location' => 'header', // nom du slug
+                  'menu' => 'header_fr', // nom à donner cette occurence du menu
+                  'menu_class' => 'menu_header', // class à attribuer au menu
+                  'menu_id' => 'menu_id', // id à attribuer au menu
+                  // voir les autres arguments possibles sur le codex
+                  );
+                  wp_nav_menu($args); ?>
             </ul>
         </div>
     </nav>
