@@ -46,7 +46,7 @@ Nous n'avons pas trouvé d'article répondant à votre recherche
 <div class="row">
     <div class="col l6 m6">
         <div class="cuteslide">
-            <div><img src="<?php bloginfo('template_url'); ?>/build/img/drone1.jpg"></div>
+            <div><img src="<?php bloginfo('template_url'); ?>/build/img/drone2.jpg"></div>
             <div><img src="<?php bloginfo('template_url'); ?>/build/img/drone2.jpg"></div>
             <div><img src="<?php bloginfo('template_url'); ?>/build/img/drone3.jpg"></div>
         </div>
