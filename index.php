@@ -17,7 +17,7 @@ if (have_posts()){
             <a href="<?php the_permalink(); ?>" class="cd-read-more">Read more</a>
             <span class="cd-date"><?php the_time('d/m/Y'); ?></span>
         </div> <!-- cd-timeline-content -->
-    </div> <!-- cd-timeline-block --> --> -->
+    </div> <!-- cd-timeline-block -->
 <?php
     }
 }
@@ -27,6 +27,8 @@ Nous n'avons pas trouvé d'article répondant à votre recherche
 <?php
 }
 ?>
+
+<?php echo do_shortcode( '[paypal-donation]' ); ?>
 
 	</section> <!-- cd-timeline -->
 

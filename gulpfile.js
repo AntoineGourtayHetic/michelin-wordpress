@@ -15,7 +15,7 @@ gulp.task('browser-sync', function() {
     //initialize browsersync
     browserSync.init(files, {
     //browsersync with a php server
-    proxy: "localhost:8888/michelin-president/",
+    proxy: "localhost:8888/hetic/h3/michelin-president/",
     notify: false
     });
 });
