@@ -255,7 +255,8 @@ $amber: (
   "accent-1":    #ffe57f,
   "accent-2":    #ffd740,
   "accent-3":    #ffc400,
-  "accent-4":    #ffab00
+  "accent-4":    #ffab00,
+  "michelin-yellow": #FFCC00
 );
 
 $orange: (
@@ -358,7 +359,7 @@ $colors: (
   "brown": $brown,
   "blue-grey": $blue-grey,
   "grey": $grey,
-  "shades": $shades
+  "shades": $shades,
 );
 
 
@@ -409,4 +410,3 @@ $colors: (
   @warn "Unknown `#{name}` in $colors.";
   @return null;
 }
-

@@ -33,7 +33,7 @@
 /* 1. Colors
    ========================================================================== */
 
-$primary-color: color("shades", "white") !default;
+$primary-color: color("amber", "michelin-yellow") !default;
 $primary-color-light: lighten($primary-color, 15%) !default;
 $primary-color-dark: darken($primary-color, 15%) !default;
 
