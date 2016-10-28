@@ -31,6 +31,9 @@ wp_enqueue_style( 'slick_theme_style' );
 wp_register_script('main', get_template_directory_uri() . '/build/js/main.js', false, NULL, true);
 wp_enqueue_script('main');
 
+wp_register_script('config', get_template_directory_uri() . '/build/js/config.js', false, NULL, true);
+wp_enqueue_script('config');
+
 wp_register_script('modernizr', get_template_directory_uri() . '/build/js/modernizr.js', false, NULL, true);
 wp_enqueue_script('modernizr');
 

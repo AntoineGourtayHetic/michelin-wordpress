@@ -3,6 +3,7 @@ var browserSync = require('browser-sync');
 var reload      = browserSync.reload;
 var sass        = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
+var localPath = require("./build/js/config.js");
 
 // browser-sync task for starting the server.
 gulp.task('browser-sync', function() {
@@ -15,7 +16,7 @@ gulp.task('browser-sync', function() {
     //initialize browsersync
     browserSync.init(files, {
     //browsersync with a php server
-    proxy: "localhost:8888/hetic/h3/michelin-president/",
+    proxy: localPath,
     notify: false
     });
 });
