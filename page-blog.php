@@ -31,14 +31,14 @@ $query = new WP_Query( array (
 				<h2><?php the_title(); ?></h2>
 				<p><?php the_field('chapeau'); ?></p>
 				<a href="#0" class="cd-read-more">Lire plus</a>
-				<span class="cd-date">Feb 10</span>
+				<span class="cd-date"><?php the_date();?></span>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 	</section> <!-- cd-timeline -->
 
 
 <?php
-}
+	}
 }
 
 get_footer(); ?>
