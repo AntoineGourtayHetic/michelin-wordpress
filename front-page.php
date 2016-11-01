@@ -28,7 +28,7 @@ Nous n'avons pas trouvé d'article répondant à votre recherche
 ?>
 	</section> <!-- cd-timeline -->
 
-    <?php echo do_shortcode( '[paypal_donation_button]' ); ?>
+
 
     <div class="row">
   <form class="col s12">
@@ -46,9 +46,9 @@ Nous n'avons pas trouvé d'article répondant à votre recherche
 <div class="row">
     <div class="col l6 m6">
         <div class="cuteslide">
-            <div><img src="<?php bloginfo('template_url'); ?>/build/img/drone1.jpg"></div>
-            <div><img src="<?php bloginfo('template_url'); ?>/build/img/drone2.jpg"></div>
-            <div><img src="<?php bloginfo('template_url'); ?>/build/img/drone3.jpg"></div>
+            <div class="slide"><img class="slide" src="<?php bloginfo('template_url'); ?>/build/img/drone1.jpg"></div>
+            <div class="slide"><img class="slide" src="<?php bloginfo('template_url'); ?>/build/img/drone2.jpg"></div>
+            <div class="slide"><img class="slide" src="<?php bloginfo('template_url'); ?>/build/img/drone3.jpg"></div>
         </div>
         <div class="navslide">
             <div><img src="<?php bloginfo('template_url'); ?>/build/img/drone1.jpg" style="padding:0 10px;"></div>

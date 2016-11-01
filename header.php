@@ -9,8 +9,9 @@
     <body <?php body_class(); ?>>
     <nav>
         <div class="nav-wrapper">
-        <a href="<?php echo home_url();?>" class="brand-logo center"><img src="<?php bloginfo('template_url'); ?>/build/img/logo.png" alt="michelin_logo" width="200px" /></a>
-            <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <div class="right"><?php echo do_shortcode( '[paypal_donation_button]' ); ?></div>
+        <a href="<?php echo home_url();?>" class="left logo"><img src="<?php bloginfo('template_url'); ?>/build/img/logo.svg" alt="michelin_logo" width="40px" /><span>2017</span></a>
+            <ul id="nav-mobile" class="left hide-on-small-and-down">
                 <?php $args=array(
                   'theme_location' => 'header', // nom du slug
                   'menu' => 'header_fr', // nom à donner cette occurence du menu

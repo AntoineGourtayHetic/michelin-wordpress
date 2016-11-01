@@ -40,4 +40,33 @@
 @import "components/date_picker/default.time";
 
 // Own style
-@import "blog"; 
+@import "blog";
+
+
+#nav-mobile{
+    margin-left:50px;
+}
+
+#donation_buttons td{
+    padding:0;
+}
+
+input[type="image"]{
+    margin-top:0px!important;
+    height: 64px;
+}
+
+.logo{
+    background:$michelin-grey;
+    height:65px;
+    width:150px;
+    padding:10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    span{
+        color: $michelin-indigo;
+        font-size:25px;
+
+    }
+}

@@ -102,7 +102,8 @@ $indigo: (
   "accent-1":    #8c9eff,
   "accent-2":    #536dfe,
   "accent-3":    #3d5afe,
-  "accent-4":    #304ffe
+  "accent-4":    #304ffe,
+  "michelin-indigo":#23028A
 );
 
 $blue: (
@@ -153,7 +154,8 @@ $cyan: (
   "accent-1":    #84ffff,
   "accent-2":    #18ffff,
   "accent-3":    #00e5ff,
-  "accent-4":    #00b8d4
+  "accent-4":    #00b8d4,
+  "michelin-cyan": #00ACFF
 );
 
 $teal: (
@@ -238,7 +240,8 @@ $yellow: (
   "accent-1":    #ffff8d,
   "accent-2":    #ffff00,
   "accent-3":    #ffea00,
-  "accent-4":    #ffd600
+  "accent-4":    #ffd600,
+  "michelin-yellow": #FFCC00
 );
 
 $amber: (
@@ -255,7 +258,7 @@ $amber: (
   "accent-1":    #ffe57f,
   "accent-2":    #ffd740,
   "accent-3":    #ffc400,
-  "accent-4":    #ffab00
+  "accent-4":    #ffab00,
 );
 
 $orange: (
@@ -328,7 +331,8 @@ $grey: (
   "darken-1":   #757575,
   "darken-2":   #616161,
   "darken-3":   #424242,
-  "darken-4":   #212121
+  "darken-4":   #212121,
+  "michelin-grey": #e9f0f5
 );
 
 $shades: (
@@ -358,7 +362,7 @@ $colors: (
   "brown": $brown,
   "blue-grey": $blue-grey,
   "grey": $grey,
-  "shades": $shades
+  "shades": $shades,
 );
 
 
