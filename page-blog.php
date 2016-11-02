@@ -38,7 +38,7 @@ $query = new WP_Query( array (
 	<?php
 	}
 	?>
-	
+
 	</section> <!-- cd-timeline -->
 
 <?php get_footer(); ?>
