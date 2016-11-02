@@ -24,8 +24,8 @@ $query = new WP_Query( array (
 
 	        <div class="cd-timeline-content">
 	            <h2><?php the_title(); ?></h2>
-	            <p><?php the_excerpt(); ?></p>
-	            <a href="<?php the_permalink(); ?>" class="cd-read-more">Read more</a>
+	            <p><?php the_field('chapeau') ?></p>
+	            <a href="<?php the_permalink(); ?>" class="cd-read-more">Lire plus</a>
 	            <span class="cd-date"><?php the_time('d/m/Y'); ?></span>
 	        </div> <!-- cd-timeline-content -->
 	    </div> <!-- cd-timeline-block -->
