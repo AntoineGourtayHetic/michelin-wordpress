@@ -4,7 +4,7 @@ function create_post_type_profil() {
   $post_type = 'actualite';
   $labels = array(
       'name'               => 'Actualités',
-      'singular_name'      => 'Actualité',
+      'singular_name'      => 'Actualite',
       'all_items'          => 'Toutes les actualités',
       'add_new'            => 'Ajouter une actualité',
       'add_new_item'       => 'Ajouter une nouvelle actualité',

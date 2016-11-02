@@ -1,12 +1,14 @@
-<?php
-/*
-Template Name: Actualité
-*/
-  get_header()
- ?>
+<?php get_header();
 
-<h2>Single actualité</h2>
- <?php
+if (have_posts()){
+    while (have_posts()){
+        the_post();
+    ?>
+        <h1><?php the_title(); ?></h1>
+        <p class="posted">Posté le <?php the_time('j F Y') ?></p>
+        <p><?php the_content(); ?></p>
+    <?php
+    }
+}
 
- get_footer()
- ?>
+get_footer(); ?>

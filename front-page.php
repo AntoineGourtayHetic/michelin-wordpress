@@ -1,22 +1,19 @@
 <?php get_header(); ?>
-<section id="cd-timeline">
-<?php
-// boucle WordPress
-if (have_posts()){
-    while (have_posts()){
-        the_post();
-?>
-    <div class="cd-timeline-block">
-        <div class="cd-timeline-img cd-picture">
-            <img src="<?php bloginfo('template_url'); ?>/build/img/cd-icon-picture.svg" alt="Picture">
-        </div> <!-- cd-timeline-img -->
-         <div class="cd-timeline-content">
-            <h2><?php the_title(); ?></h2>
-            <p><?php the_excerpt(); ?></p>
-            <a href="<?php the_permalink(); ?>" class="cd-read-more">Read more</a>
-            <span class="cd-date"><?php the_time('d/m/Y'); ?></span>
-        </div> <!-- cd-timeline-content -->
-    </div> <!-- cd-timeline-block -->
+<section class="row blog_articles">
+<?
+$query = new WP_Query( array (
+	'post_type' => 'actualite',
+	'posts_per_page' => -1,
+	'orderby' => 'date',
+	'order' => 'DESC',
+));
+	if ($query->have_posts()){
+			while ($query->have_posts()){
+					$query->the_post();
+	?>
+    <a href="<?php the_permalink(); ?>" class="article col s12 l4">
+        <h4><?php the_title(); ?></h4>
+    </a>
 <?php
     }
 }
@@ -26,7 +23,7 @@ Nous n'avons pas trouvé d'article répondant à votre recherche
 <?php
 }
 ?>
-	</section> <!-- cd-timeline -->
+</section>
 
 
 
@@ -46,14 +43,14 @@ Nous n'avons pas trouvé d'article répondant à votre recherche
 <div class="row">
     <div class="col l6 m6">
         <div class="cuteslide">
-            <div class="slide"><img class="slide" src="<?php bloginfo('template_url'); ?>/build/img/drone1.jpg"></div>
-            <div class="slide"><img class="slide" src="<?php bloginfo('template_url'); ?>/build/img/drone2.jpg"></div>
-            <div class="slide"><img class="slide" src="<?php bloginfo('template_url'); ?>/build/img/drone3.jpg"></div>
+            <div class="slide"><img class="slide" src="<?php bloginfo('template_url'); ?>/build/img/bibendum.jpg"></div>
+            <div class="slide"><img class="slide" src="<?php bloginfo('template_url'); ?>/build/img/logo.png"></div>
+            <div class="slide"><img class="slide" src="<?php bloginfo('template_url'); ?>/build/img/bib_hor.jpg"></div>
         </div>
         <div class="navslide">
-            <div><img src="<?php bloginfo('template_url'); ?>/build/img/drone1.jpg" style="padding:0 10px;"></div>
-            <div><img src="<?php bloginfo('template_url'); ?>/build/img/drone2.jpg" style="padding:0 10px;"></div>
-            <div><img src="<?php bloginfo('template_url'); ?>/build/img/drone3.jpg" style="padding:0 10px;"></div>
+            <div><img src="<?php bloginfo('template_url'); ?>/build/img/bibendum.jpg" style="padding:0 10px;"></div>
+            <div><img src="<?php bloginfo('template_url'); ?>/build/img/logo.png" style="padding:0 10px;"></div>
+            <div><img src="<?php bloginfo('template_url'); ?>/build/img/bib_hor.jpg" style="padding:0 10px;"></div>
         </div>
     </div>
 </div>
