@@ -1,6 +1,6 @@
 </div>
 
-<footer class="page-footer">
+<footer class="page-footer" id="footer">
   <div class="container">
     <div class="row">
       <div class="col l6 s12">
@@ -10,10 +10,14 @@
       <div class="col l4 offset-l2 s12">
         <h5 class="white-text">Links</h5>
         <ul>
-          <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-          <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-          <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-          <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+					<?php $args=array(
+						'theme_location' => 'footer', // nom du slug
+						'menu' => 'footer_fr', // nom à donner cette occurence du menu
+						'menu_class' => 'menu_footer', // class à attribuer au menu
+						'menu_id' => 'menu_id', // id à attribuer au menu
+						// voir les autres arguments possibles sur le codex
+						);
+						wp_nav_menu($args); ?>
         </ul>
       </div>
     </div>
