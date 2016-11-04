@@ -1,3 +1,8 @@
+<?php
+/*
+Template Name: Actualite
+*/
+?>
 <?php get_header();
 
 if (have_posts()){
@@ -9,6 +14,11 @@ if (have_posts()){
         <p><?php the_content(); ?></p>
     <?php
     }
+} else {
+?>
+Nous n'avons pas trouvé d'article répondant à votre recherche
+<?php
 }
+?>
 
-get_footer(); ?>
+<?php get_footer(); ?>
