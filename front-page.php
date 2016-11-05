@@ -15,7 +15,7 @@ $query = new WP_Query( array (
 			<?php
 				if(has_post_thumbnail()){
 					echo '<div class="responsiveImage">';
-					the_post_thumbnail("thumbnail_member");
+					the_post_thumbnail("thumbnail_articles");
 					echo '</div>';
 			}
 			 ?>
