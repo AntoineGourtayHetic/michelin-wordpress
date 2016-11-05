@@ -11,9 +11,16 @@ $query = new WP_Query( array (
 			while ($query->have_posts()){
 					$query->the_post();
 	?>
-    <a href="<?php the_permalink(); ?>" class="article col s12 l4">
-        <h4><?php the_title(); ?></h4>
-    </a>
+		<article class="col-s4">
+			<?php
+				if(has_post_thumbnail()){
+					echo '<div class="responsiveImage">';
+					the_post_thumbnail("thumbnail_member");
+					echo '</div>';
+			}
+			 ?>
+			<h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
+		</article>
 <?php
     }
 }
