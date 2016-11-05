@@ -11,7 +11,7 @@ $query = new WP_Query( array (
 			while ($query->have_posts()){
 					$query->the_post();
 	?>
-		<article class="col-s4">
+		<article class="col s4">
 			<?php
 				if(has_post_thumbnail()){
 					echo '<div class="responsiveImage">';
