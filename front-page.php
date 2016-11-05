@@ -11,10 +11,10 @@ $query = new WP_Query( array (
 			while ($query->have_posts()){
 					$query->the_post();
 	?>
-		<article class="col s4">
+		<article class="col s3">
 			<?php
 				if(has_post_thumbnail()){
-					echo '<div class="responsiveImage">';
+					echo '<div class="postThumbnail">';
 					the_post_thumbnail("thumbnail_articles");
 					echo '</div>';
 			}

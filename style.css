@@ -76,4 +76,8 @@ span.a2a_svg.a2a_s__default.a2a_s_google_plus,span.a2a_svg.a2a_s__default.a2a_s_
 		max-width: 100%;
 	  height:auto;
 }
+
+article {
+	padding: 10px;
+}
 /* ---------- Footer ---------- */
