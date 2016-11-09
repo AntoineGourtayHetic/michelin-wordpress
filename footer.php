@@ -4,20 +4,11 @@
   <div class="container">
     <div class="row">
       <div class="col l6 s12">
-        <h5 class="white-text"><?php
-					$footer_title = get_option('footer_title');
-					echo $footer_title;
-				?></h5>
-        <p class="grey-text text-lighten-4"><?php
-					$footer_content = get_option('footer_content');
-					echo $footer_content;
-				?></p>
+        <h5 class="white-text"><?php echo get_option('footer_title'); ?></h5>
+        <p class="grey-text text-lighten-4"><?php echo get_option('footer_content'); ?></p>
       </div>
       <div class="col l4 offset-l2 s12">
-        <h5 class="white-text"><?php
-					$footer_menuTitle = get_option('footer_menuTitle');
-					echo $footer_menuTitle;
-				?></h5>
+        <h5 class="white-text"><?php echo get_option('footer_menuTitle'); ?></h5>
         <ul>
 					<?php $args=array(
 						'theme_location' => 'footer', // nom du slug
@@ -32,10 +23,9 @@
     </div>
   </div>
   <div class="footer-copyright">
-    <div class="container"><?php
-			$footer_coopyright = get_option('footer_coopyright');
-			echo $footer_coopyright;
-		?><a class="grey-text text-lighten-4 right" href="#!">Mentions légales</a>
+    <div class="container">
+			<?php echo get_option('footer_coopyright'); ?>
+			<a class="grey-text text-lighten-4 right" href="#!">Mentions légales</a>
     </div>
   </div>
 </footer>
