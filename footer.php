@@ -14,7 +14,10 @@
 				?></p>
       </div>
       <div class="col l4 offset-l2 s12">
-        <h5 class="white-text">Links</h5>
+        <h5 class="white-text"><?php
+					$footer_menuTitle = get_option('footer_menuTitle');
+					echo $footer_menuTitle;
+				?></h5>
         <ul>
 					<?php $args=array(
 						'theme_location' => 'footer', // nom du slug

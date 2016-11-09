@@ -52,6 +52,12 @@ function display_footer_content()
     	<input type="textarea" name="footer_content" id="footer_content" value="<?php echo get_option('footer_content'); ?>" />
     <?php
 }
+function display_footer_menuTitle()
+{
+	?>
+    	<input type="text" name="footer_menuTitle" id="footer_menuTitle" value="<?php echo get_option('footer_menuTitle'); ?>" />
+    <?php
+}
 function display_footer_coopyright()
 {
 	?>
@@ -66,12 +72,14 @@ function display_theme_panel_fields()
   	add_settings_field("facebook_url", "Facebook Profile Url", "display_facebook_element", "theme-options", "section");
 		add_settings_field("footer_title", "Footer title", "display_footer_title", "theme-options", "section");
 		add_settings_field("footer_content", "Footer content", "display_footer_content", "theme-options", "section");
+		add_settings_field("footer_menuTitle", "Footer menu title", "display_footer_menuTitle", "theme-options", "section");
 		add_settings_field("footer_coopyright", "Footer coopyright", "display_footer_coopyright", "theme-options", "section");
 
     register_setting("section", "twitter_url");
     register_setting("section", "facebook_url");
 		register_setting("section", "footer_title");
 		register_setting("section", "footer_content");
+		register_setting("section", "footer_menuTitle");
 		register_setting("section", "footer_coopyright");
 }
 add_action("admin_init", "display_theme_panel_fields");
