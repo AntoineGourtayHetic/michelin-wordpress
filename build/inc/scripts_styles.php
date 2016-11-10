@@ -25,7 +25,7 @@ wp_enqueue_style( 'slick_theme_style' );
 wp_localize_script('main', 'ajaxurl', admin_url( 'admin-ajax.php' ) );
 
 // enregistrement d'un nouveau script
-wp_register_script('main', get_template_directory_uri() . 'build/js/main.js', array('jquery'),'1.0', true);
+wp_register_script('main', get_template_directory_uri() . '/build/js/main.js', array('jquery'),'1.0', true);
 wp_enqueue_script('main');
 wp_localize_script('main', 'ajaxurl', admin_url( 'admin-ajax.php' ) );
 
