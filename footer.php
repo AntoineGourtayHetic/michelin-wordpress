@@ -23,11 +23,11 @@
     </div>
   </div>
   <div class="footer-copyright">
-    <div class="container">
-			<nav>
+		<div class="container">
+			<nav class="nav-copyright">
 	        <div class="nav-wrapper">
 							<?php echo get_option('footer_coopyright'); ?>
-	            <ul id="nav-mobile" class="left hide-on-small-and-down">
+	            <ul id="nav-mobile" class="right hide-on-small-and-down">
 	                <?php $args=array(
 	                  'theme_location' => 'copyright', // nom du slug
 	                  'menu' => 'footer_copyright_fr', // nom à donner cette occurence du menu
@@ -39,7 +39,7 @@
 	            </ul>
 	        </div>
 	    </nav>
-    </div>
+		</div>
   </div>
 </footer>
 

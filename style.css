@@ -81,3 +81,10 @@ article {
 	padding: 10px;
 }
 /* ---------- Footer ---------- */
+nav.nav-copyright {
+    color: #fff;
+    background-color: #efc004;
+    width: 100%;
+    height: 56px;
+    line-height: 56px;
+}
