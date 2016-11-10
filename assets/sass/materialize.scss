@@ -42,6 +42,11 @@
 // Own style
 @import "blog";
 
+body{
+  font-family: "Futura", sans-serif;
+  font-weight: 200;
+}
+
 
 #nav-mobile{
     margin-left:50px;
@@ -57,7 +62,7 @@ input[type="image"]{
 }
 
 .logo{
-    background:$michelin-grey;
+    background:white;
     height:65px;
     width:150px;
     padding:10px;
@@ -74,23 +79,4 @@ input[type="image"]{
 p.posted{
     font-size:15px;
     color:red;
-}
-
-.blog_articles{
-    .article{
-        display: flex;
-        height: 300px;
-        background-image: url("../img/bibendum.jpg");
-        h4{
-            display: flex;
-            align-content: flex-end;
-            justify-content:flex-end;
-            font-family: Futura;
-        }
-    }
-}
-
-@font-face {
-    font-family: Futura;
-    src: url("../fonts/Gurmukhi.ttf");
 }
