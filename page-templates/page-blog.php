@@ -5,6 +5,9 @@ Template Name: Blog
 ?>
 <?php get_header(); ?>
 
+<?php
+get_template_part('build/views/ajax-search');
+ ?>
 	<section id="cd-timeline" class="cd-container">
 <?php
 $query = new WP_Query( array (
