@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 <section class="row blog_articles">
-<?
+<?php
 $query = new WP_Query( array (
 	'post_type' => 'actualite',
-	'posts_per_page' => -1,
+	'posts_per_page' => 4,
 	'orderby' => 'date',
 	'order' => 'DESC',
 ));

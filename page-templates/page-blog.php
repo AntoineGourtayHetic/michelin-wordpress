@@ -6,7 +6,7 @@ Template Name: Blog
 <?php get_header(); ?>
 
 	<section id="cd-timeline" class="cd-container">
-<?php get_header();
+<?php
 $query = new WP_Query( array (
 	'post_type' => 'actualite',
 	'posts_per_page' => -1,
@@ -24,7 +24,7 @@ $query = new WP_Query( array (
 
 	        <div class="cd-timeline-content">
 	            <h2><?php the_title(); ?></h2>
-	            <p><?php the_field('chapeau') ?></p>
+	            <p><?php the_content() ?></p>
 	            <a href="<?php the_permalink(); ?>" class="cd-read-more">Lire plus</a>
 	            <span class="cd-date"><?php the_time('d/m/Y'); ?></span>
 	        </div> <!-- cd-timeline-content -->
