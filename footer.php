@@ -24,8 +24,21 @@
   </div>
   <div class="footer-copyright">
     <div class="container">
-			<?php echo get_option('footer_coopyright'); ?>
-			<a class="grey-text text-lighten-4 right" href="#!">Mentions légales</a>
+			<nav>
+	        <div class="nav-wrapper">
+							<?php echo get_option('footer_coopyright'); ?>
+	            <ul id="nav-mobile" class="left hide-on-small-and-down">
+	                <?php $args=array(
+	                  'theme_location' => 'footer', // nom du slug
+	                  'menu' => 'footer_copyright_fr', // nom à donner cette occurence du menu
+	                  'menu_class' => 'menu_footer_copyright', // class à attribuer au menu
+	                  'menu_id' => 'menu_id', // id à attribuer au menu
+	                  // voir les autres arguments possibles sur le codex
+	                  );
+	                  wp_nav_menu($args); ?>
+	            </ul>
+	        </div>
+	    </nav>
     </div>
   </div>
 </footer>
