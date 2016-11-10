@@ -1,6 +1,6 @@
 <?php
 $args=array(
-  'post_type' => 'annonce',
+  'post_type' => 'actualite',
   'posts_per_page' => 5,
   's' => $search_input
   );
