@@ -8,7 +8,7 @@ function autocompletion_function()
   global $wpdb, $_POST;
 
   $search_input = $_POST['search_input'];
-  include  get_template_directory().'build/views/ajax-search-result.php';
+  include  get_template_directory().'/build/views/ajax-search-result.php';
 
   die();
 }

@@ -65,6 +65,12 @@ function display_footer_coopyright()
     	<input type="text" name="footer_coopyright" id="footer_coopyright" value="<?php echo get_option('footer_coopyright'); ?>" />
     <?php
 }
+function display_contact_form()
+{
+	?>
+    	<input type="text" name="contact_form" id="contact_form" value="<?php echo get_option('contact_form'); ?>" />
+    <?php
+}
 function display_theme_panel_fields()
 {
 	add_settings_section("section", "All Settings", null, "theme-options");
@@ -75,6 +81,8 @@ function display_theme_panel_fields()
 		add_settings_field("footer_content", "Footer content", "display_footer_content", "theme-options", "section");
 		add_settings_field("footer_menuTitle", "Footer menu title", "display_footer_menuTitle", "theme-options", "section");
 		add_settings_field("footer_coopyright", "Footer coopyright", "display_footer_coopyright", "theme-options", "section");
+		add_settings_field("contact_form", "Contact form", "display_contact_form", "theme-options", "section");
+
 
     register_setting("section", "twitter_url");
     register_setting("section", "facebook_url");
@@ -82,6 +90,7 @@ function display_theme_panel_fields()
 		register_setting("section", "footer_content");
 		register_setting("section", "footer_menuTitle");
 		register_setting("section", "footer_coopyright");
+		register_setting("section", "contact_form");
 }
 add_action("admin_init", "display_theme_panel_fields");
 

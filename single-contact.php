@@ -17,7 +17,7 @@ if (have_posts()){
             <h2><?php the_title(); ?></h2>
 						<div class="row">
 							<div class="col s6">
-									<?php echo do_shortcode( '[contact-form-7 id="31" title="Formulaire de contact 1"]' ); ?>
+									<?php echo do_shortcode(get_option('contact_form')); ?>
 							</div>
 							<div class="col s6">
 									<?php the_content(); ?>
