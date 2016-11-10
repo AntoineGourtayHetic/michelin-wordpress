@@ -29,10 +29,10 @@
 							<?php echo get_option('footer_coopyright'); ?>
 	            <ul id="nav-mobile" class="left hide-on-small-and-down">
 	                <?php $args=array(
-	                  'theme_location' => 'footer', // nom du slug
+	                  'theme_location' => 'copyright', // nom du slug
 	                  'menu' => 'footer_copyright_fr', // nom à donner cette occurence du menu
 	                  'menu_class' => 'menu_footer_copyright', // class à attribuer au menu
-	                  'menu_id' => 'menu_id', // id à attribuer au menu
+	                  'menu_id' => 'menu_id_copyright', // id à attribuer au menu
 	                  // voir les autres arguments possibles sur le codex
 	                  );
 	                  wp_nav_menu($args); ?>
