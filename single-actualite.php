@@ -1,0 +1,24 @@
+<?php
+/*
+Template Name: Actualite
+*/
+?>
+<?php get_header();
+
+if (have_posts()){
+    while (have_posts()){
+        the_post();
+    ?>
+        <h1><?php the_title(); ?></h1>
+        <p class="posted">Posté le <?php the_time('j F Y') ?></p>
+        <p><?php the_content(); ?></p>
+    <?php
+    }
+} else {
+?>
+Nous n'avons pas trouvé d'article répondant à votre recherche
+<?php
+}
+?>
+
+<?php get_footer(); ?>
