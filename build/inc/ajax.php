@@ -1,6 +1,4 @@
 <?php
-add_action('wp_ajax_nopriv_filtre-category','filtre_category_function');
-
 add_action('wp_ajax_autocompletion','autocompletion_function');
 add_action('wp_ajax_nopriv_autocompletion','autocompletion_function');
 function autocompletion_function()
