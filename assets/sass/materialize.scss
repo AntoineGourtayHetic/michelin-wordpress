@@ -76,7 +76,32 @@ input[type="image"]{
     }
 }
 
+.card .card-content p{
+  height:100px;
+  font-size:30px;
+}
+
 p.posted{
     font-size:15px;
     color:red;
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+  .logo{
+    background:white;
+    height:65px;
+    width:50px;
+    padding:10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    span{
+        color: $michelin-indigo;
+        font-size:25px;
+        display: none;
+    }
+  }
 }

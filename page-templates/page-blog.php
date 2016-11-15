@@ -25,8 +25,17 @@ $query = new WP_Query( array (
 	            <img src="<?php bloginfo('template_url'); ?>/build/img/cd-icon-picture.svg" alt="Picture">
 	        </div> <!-- cd-timeline-img -->
 
-	        <div class="cd-timeline-content">
+          <div class="cd-timeline-content">
 	            <h2><?php the_title(); ?></h2>
+
+          <?php
+              if(has_post_thumbnail())
+              {
+                echo '<div class="responsiveImage">';
+                the_post_thumbnail("thumbnail_articles");
+                echo '</div>';
+              }
+          ?>
 	            <p><?php the_excerpt() ?></p>
 	            <a href="<?php the_permalink(); ?>" class="cd-read-more">Lire plus</a>
 	            <span class="cd-date"><?php the_time('d/m/Y'); ?></span>

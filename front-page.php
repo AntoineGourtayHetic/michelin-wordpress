@@ -1,6 +1,6 @@
-<?php get_header(); ?>
-<section class="row blog_articles">
-<?php
+<?php get_header();?>
+	<div class="row">
+<?
 $query = new WP_Query( array (
 	'post_type' => 'actualite',
 	'posts_per_page' => 4,
@@ -11,17 +11,25 @@ $query = new WP_Query( array (
 			while ($query->have_posts()){
 					$query->the_post();
 	?>
-		<article class="col s3">
+					<div class="col s12 m12 l4">
+						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+						<div class="card">
+							<div class="card-image">
+								<?if(has_post_thumbnail()){
+									?><img src="<?php the_post_thumbnail_url("thumbnail_articles")?>"><?
+							}
+							else{
+								?><img src="<?php bloginfo('template_url'); ?>/build/img/bib_hor.jpg"><?
+							}
+							?>
+							</div>
+							<div class="card-content">
+								<p><? the_title() ?></p>
+							</div>
+						</div>
+						</a>
+					</div>
 			<?php
-				if(has_post_thumbnail()){
-					echo '<div class="postThumbnail">';
-					the_post_thumbnail("thumbnail_articles");
-					echo '</div>';
-			}
-			 ?>
-			<h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
-		</article>
-<?php
     }
 }
 else {
@@ -30,7 +38,8 @@ Nous n'avons pas trouvé d'article répondant à votre recherche
 <?php
 }
 ?>
-</section>
+
+</div>
 
 
 
@@ -44,22 +53,6 @@ Nous n'avons pas trouvé d'article répondant à votre recherche
       </div>
     </div>
   </form>
-</div>
-
-
-<div class="row">
-    <div class="col l6 m6">
-        <div class="cuteslide">
-            <div class="slide"><img class="slide" src="<?php bloginfo('template_url'); ?>/build/img/bibendum.jpg"></div>
-            <div class="slide"><img class="slide" src="<?php bloginfo('template_url'); ?>/build/img/logo.png"></div>
-            <div class="slide"><img class="slide" src="<?php bloginfo('template_url'); ?>/build/img/bib_hor.jpg"></div>
-        </div>
-        <div class="navslide">
-            <div><img src="<?php bloginfo('template_url'); ?>/build/img/bibendum.jpg" style="padding:0 10px;"></div>
-            <div><img src="<?php bloginfo('template_url'); ?>/build/img/logo.png" style="padding:0 10px;"></div>
-            <div><img src="<?php bloginfo('template_url'); ?>/build/img/bib_hor.jpg" style="padding:0 10px;"></div>
-        </div>
-    </div>
 </div>
 
 <?php get_footer(); ?>
