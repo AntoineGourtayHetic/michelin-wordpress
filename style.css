@@ -80,6 +80,28 @@ span.a2a_svg.a2a_s__default.a2a_s_google_plus,span.a2a_svg.a2a_s__default.a2a_s_
 article {
 	padding: 10px;
 }
+/*****
+page contact
+******/
+.gmaps{
+	margin-bottom: 50px;
+}
+form{
+	margin-bottom: 50px;
+}
+input[type="submit"]{
+	background-color: #FFCC00;
+	border: 0;
+	padding: 20px;
+	color: #fff;
+}
+input[type="submit"]:hover{
+	background-color: #00A9EB;
+	border: 0;
+	padding: 20px;
+	color: #fff;
+}
+
 /* ---------- Footer ---------- */
 nav.nav-copyright {
     background-color: #efc004;
