@@ -94,9 +94,9 @@ nav.nav-copyright {
 
 #searchAjax {
   position:relative;
-  text-align:left;
   width:300px;
   margin:0 auto;
+	text-align: center;
 }
 
 #searchResult{
@@ -110,7 +110,7 @@ nav.nav-copyright {
   padding:7px 5px;
   width:250px;
   font-size:18px;
-
+	text-align: center;
 }
 #searchResult li{
   list-style:none;
