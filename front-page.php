@@ -10,6 +10,7 @@ $query = new WP_Query( array (
 	'posts_per_page' => 3,
 	'orderby' => 'date',
 	'order' => 'DESC',
+	
 ));
 	if ($query->have_posts()){
 			while ($query->have_posts()){
@@ -70,4 +71,3 @@ Nous n'avons pas trouvé d'article répondant à votre recherche
 </div>
 
 <?php get_footer(); ?>
-
