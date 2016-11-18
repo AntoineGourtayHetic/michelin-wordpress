@@ -28,19 +28,6 @@ function theme_settings_page(){
 	<?php
 }
 
-function display_twitter_element()
-{
-	?>
-    	<input type="text" name="twitter_url" id="twitter_url" value="<?php echo get_option('twitter_url'); ?>" />
-    <?php
-}
-
-function display_facebook_element()
-{
-	?>
-    	<input type="text" name="facebook_url" id="facebook_url" value="<?php echo get_option('facebook_url'); ?>" />
-    <?php
-}
 function display_footer_title()
 {
 	?>
@@ -65,32 +52,36 @@ function display_footer_coopyright()
     	<input type="text" name="footer_coopyright" id="footer_coopyright" value="<?php echo get_option('footer_coopyright'); ?>" />
     <?php
 }
-function display_contact_form()
+function display_newsletter()
 {
 	?>
-    	<input type="text" name="contact_form" id="contact_form" value="<?php echo get_option('contact_form'); ?>" />
-    <?php
+	<input type="text" name="newsletter" id="newsletter" value="<?php echo get_option('newsletter'); ?>" />
+	<?php
+}
+function display_newsletter_title()
+{
+	?>
+	<input type="text" name="newsletter_title" id="newsletter_title" value="<?php echo get_option('newsletter_title'); ?>" />
+	<?php
 }
 function display_theme_panel_fields()
 {
 	add_settings_section("section", "All Settings", null, "theme-options");
 
-		add_settings_field("twitter_url", "Twitter Profile Url", "display_twitter_element", "theme-options", "section");
-  	add_settings_field("facebook_url", "Facebook Profile Url", "display_facebook_element", "theme-options", "section");
 		add_settings_field("footer_title", "Footer title", "display_footer_title", "theme-options", "section");
 		add_settings_field("footer_content", "Footer content", "display_footer_content", "theme-options", "section");
 		add_settings_field("footer_menuTitle", "Footer menu title", "display_footer_menuTitle", "theme-options", "section");
 		add_settings_field("footer_coopyright", "Footer coopyright", "display_footer_coopyright", "theme-options", "section");
-		add_settings_field("contact_form", "Contact form", "display_contact_form", "theme-options", "section");
+		add_settings_field("newsletter", "Newsletter shortcode", "display_newsletter", "theme-options", "section");
+		add_settings_field("newsletter_title", "Newsletter title shortcode", "display_newsletter_title", "theme-options", "section");
 
 
-    register_setting("section", "twitter_url");
-    register_setting("section", "facebook_url");
 		register_setting("section", "footer_title");
 		register_setting("section", "footer_content");
 		register_setting("section", "footer_menuTitle");
 		register_setting("section", "footer_coopyright");
-		register_setting("section", "contact_form");
+		register_setting("section", "newsletter");
+		register_setting("section", "newsletter_title");
 }
 add_action("admin_init", "display_theme_panel_fields");
 

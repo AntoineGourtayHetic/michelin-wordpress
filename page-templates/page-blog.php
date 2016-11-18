@@ -11,7 +11,7 @@ get_template_part('/build/views/ajax-search');
 	<section id="cd-timeline" class="cd-container">
 <?php
 $query = new WP_Query( array (
-	'post_type' => 'actualite',
+	'post_type' => 'post',
 	'posts_per_page' => -1,
 	'orderby' => 'date',
 	'order' => 'DESC',
@@ -22,7 +22,20 @@ $query = new WP_Query( array (
 	?>
 	    <div class="cd-timeline-block">
 	        <div class="cd-timeline-img cd-picture">
-	            <img src="<?php bloginfo('template_url'); ?>/build/img/cd-icon-picture.svg" alt="Picture">
+              <?php $field = get_field_object('icone');
+                    $value = $field['value'];
+                    if ($value === 'Evenement'){ ?>
+	            <img src="<?php bloginfo('template_url'); ?>/build/img/cd-icon-article.svg" alt="Picture">
+              <?php }
+              else if ($value === 'Photo'){?>
+                <img src="<?php bloginfo('template_url'); ?>/build/img/cd-icon-picture.svg" alt="Picture">
+              <? }
+              else if ($value === 'Video'){?>
+                <img src="<?php bloginfo('template_url'); ?>/build/img/cd-icon-movie.svg" alt="Picture">
+              <? }
+              else if ($value === 'Medias'){?>
+                <img src="<?php bloginfo('template_url'); ?>/build/img/cd-icon-location.svg" alt="Picture">
+              <? } ?>
 	        </div> <!-- cd-timeline-img -->
 
           <div class="cd-timeline-content">
@@ -36,7 +49,7 @@ $query = new WP_Query( array (
                 echo '</div>';
               }
           ?>
-	            <p><?php the_excerpt() ?></p>
+              <p><?php the_field('article-chapeau') ?></p>
 	            <a href="<?php the_permalink(); ?>" class="cd-read-more">Lire plus</a>
 	            <span class="cd-date"><?php the_time('d/m/Y'); ?></span>
 	        </div> <!-- cd-timeline-content -->

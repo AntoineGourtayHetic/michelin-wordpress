@@ -3,6 +3,7 @@
     <head>
         <meta charset="<?php bloginfo( 'charset' ); ?>" />
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
+				 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
          <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <?php wp_head(); ?>
     </head>
@@ -10,9 +11,9 @@
 		<header id="header">
 	    <nav>
 	        <div class="nav-wrapper">
-	        <div class="right"><?php echo do_shortcode( '[paypal_donation_button]' ); ?></div>
-	        <a href="<?php echo home_url();?>" class="left logo"><img src="<?php bloginfo('template_url'); ?>/build/img/logo.svg" alt="michelin_logo" width="40px" /><span>2017</span></a>
-	            <ul id="nav-mobile" class="left hide-on-small-and-down">
+	        <div class="donate"><?php echo do_shortcode( '[paypal_donation_button]' ); ?></div>
+	        <a href="<?php echo home_url();?>" class="left logo"><img src="<?php bloginfo('template_url'); ?>/build/img/logo.svg" alt="michelin_logo" width="34px" /><span class="year">2017</span></a>
+	            <ul id="nav-mobile" class="left">
 	                <?php $args=array(
 	                  'theme_location' => 'header', // nom du slug
 	                  'menu' => 'header_fr', // nom à donner cette occurence du menu

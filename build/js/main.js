@@ -41,7 +41,7 @@ jQuery(document).ready(function($){
   var rechercheEnCours=false;
 
 
-  console.log(ajaxurl);
+//  console.log(ajaxurl);
 
 $("#searchAjaxInput").on("keyup",function(e){
     if(rechercheEnCours==false)

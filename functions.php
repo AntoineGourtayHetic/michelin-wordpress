@@ -14,3 +14,6 @@ include_once('build/inc/scripts_styles.php');
 
 // THEME SUPPORT
 include_once('build/inc/theme_support.php');
+
+// AJAX
+include_once('build/inc/ajax.php');

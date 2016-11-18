@@ -1,9 +1,13 @@
 <?php get_header();?>
+<h1 class="title_home">Michelin Bibendum 2017 <br> - <br>Pour une France gonflée à bloc !</h1>
+<img class="responsive-img img-home" src="http://hetic.michelinpresident.antoine-gourtay.fr/wp-content/uploads/2016/11/bibendum-michelin.png">
+<h1 class="articles_home">Dernières actualités</h1>
+<div class="divider"></div>
 	<div class="row">
 <?
 $query = new WP_Query( array (
-	'post_type' => 'actualite',
-	'posts_per_page' => 4,
+	'post_type' => 'post',
+	'posts_per_page' => 3,
 	'orderby' => 'date',
 	'order' => 'DESC',
 ));
@@ -24,7 +28,7 @@ $query = new WP_Query( array (
 							?>
 							</div>
 							<div class="card-content">
-								<p><? the_title() ?></p>
+								<h5><? the_title() ?></h5>
 							</div>
 						</div>
 						</a>
@@ -41,18 +45,29 @@ Nous n'avons pas trouvé d'article répondant à votre recherche
 
 </div>
 
+<div class="divider"></div>
+
+<h5 class="donate_home">Nous soutenir !</h5>
+<?php echo do_shortcode( '[paypal_donation_button]' ); ?>
+
+<!-- Slider woocommerce -->
+<?php masterslider(2); ?>
 
 
+
+<div class="divider" style="margin-top:70px"></div>
+
+  <div class="row" style="padding-top:30px;">
+  <form class="col s6">
     <div class="row">
-  <form class="col s12">
-    <div class="row">
-        <h3>Receive our latest news !</h3>
-      <div class="input-field col s12">
-        <input id="email" type="email" class="validate">
-        <label for="email" data-error="wrong" data-success="right">Email</label>
-      </div>
+        <h3><?php echo do_shortcode(get_option('newsletter_title')); ?></h3>
+      	<?php echo do_shortcode(get_option('newsletter')); ?>
     </div>
   </form>
+	<div class="col s6">
+		<a class="twitter-timeline" data-width="500" data-height="600" href="https://twitter.com/Michelin">Tweets by Michelin</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+	</div>
 </div>
 
 <?php get_footer(); ?>
+

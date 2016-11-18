@@ -20,8 +20,9 @@ a{
 
 /* --------- Content --------- */
 
+
 #content{
-    background-color:#f1f2f4;
+    background-color:#fff;
 }
 
 /* Posts */
@@ -91,17 +92,27 @@ form{
 }
 input[type="submit"]{
 	background-color: #FFCC00;
-	border: 0;
+	border: none;
+	border-bottom: none !important;
 	padding: 20px;
 	color: #fff;
 }
 input[type="submit"]:hover{
-	background-color: #00A9EB;
-	border: 0;
+	background-color: #00B6FF;
+	border: none;
+	border-bottom: none !important;
 	padding: 20px;
 	color: #fff;
 }
 
+input {
+	border-bottom: 1px solid #00B6FF !important;
+}
+
+textarea{
+	border: none;
+	border-bottom: 1px solid #00B6FF !important;
+}
 /* ---------- Footer ---------- */
 nav.nav-copyright {
     background-color: #efc004;
@@ -138,4 +149,37 @@ nav.nav-copyright {
   list-style:none;
   padding:10px 0px;
   width:300px;
+}
+
+/** WooCommerce templating**/
+.woocommerce div.product {
+    margin-bottom: 0;
+    position: relative;
+    margin-top: 10%;
+}
+
+.woocommerce div.product .product_title {
+  font-size: 3.2rem;
+}
+
+#tab-description h2 {
+  font-size: 2.3rem;
+}
+
+.photo-centered{
+  text-align: center;
+}
+
+/** Page Promesses **/
+
+.container-card {
+  width: 100%;
+}
+
+.title-promesse {
+  font-size: 1.5em;
+}
+
+.card-panel {
+  width: 100%;
 }

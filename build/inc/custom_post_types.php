@@ -1,21 +1,21 @@
 <?php
 add_action('init', create_post_type_profil);
 function create_post_type_profil() {
-  $post_type = 'actualite';
+  $post_type = 'promesse';
   $labels = array(
-      'name'               => 'Actualités',
-      'singular_name'      => 'Actualite',
-      'all_items'          => 'Toutes les actualités',
-      'add_new'            => 'Ajouter une actualité',
-      'add_new_item'       => 'Ajouter une nouvelle actualité',
-      'edit_item'          => "Modifier l'actualité",
-      'new_item'           => 'Nouvelle actualité',
-      'view_item'          => "Voir l'actualité",
-      'search_items'       => 'Chercher une actualité',
+      'name'               => 'Promesses',
+      'singular_name'      => 'Promesse',
+      'all_items'          => 'Toutes les promesses',
+      'add_new'            => 'Ajouter une promesse',
+      'add_new_item'       => 'Ajouter une nouvelle promesse',
+      'edit_item'          => "Modifier la promesse",
+      'new_item'           => 'Nouvelle promesse',
+      'view_item'          => "Voir la promesse",
+      'search_items'       => 'Chercher une promesse',
       'not_found'          => 'Pas de résultat',
       'not_found_in_trash' => 'Pas de résultat',
-      'parent_item_colon'  => 'Actualité : ',
-      'menu_name'          => 'Actualités',
+      'parent_item_colon'  => 'Promesse : ',
+      'menu_name'          => 'Promesses',
   );
 
   $args = array(
